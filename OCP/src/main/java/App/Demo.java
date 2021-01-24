@@ -5,8 +5,10 @@ import Entities.Size;
 import java.util.List;
 import Entities.Color;
 import Service.ProductFilter;
+import ServiceImplementation.AndSpecification;
 import ServiceImplementation.BetterFilter;
 import ServiceImplementation.ColorSpecification;
+import ServiceImplementation.SizeSpecification;
 
 public class Demo {
     public static void main(String[] args) {
@@ -28,5 +30,12 @@ public class Demo {
         betterFilter.filter(products, new ColorSpecification(Color.GREEN))
                 .forEach(product -> System.out.println(
                         " - " + product.getName() + " is green"));
+
+        System.out.println("Large blue items:");
+        betterFilter.filter(products, new AndSpecification<>(
+                                            new ColorSpecification(Color.BLUE),
+                                            new SizeSpecification(Size.LARGE)))
+                .forEach(product -> System.out.println(
+                        " - " + product.getName() + " is blue and large"));
     }
 }
