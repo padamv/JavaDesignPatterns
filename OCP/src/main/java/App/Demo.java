@@ -5,6 +5,8 @@ import Entities.Size;
 import java.util.List;
 import Entities.Color;
 import Service.ProductFilter;
+import ServiceImplementation.BetterFilter;
+import ServiceImplementation.ColorSpecification;
 
 public class Demo {
     public static void main(String[] args) {
@@ -18,6 +20,12 @@ public class Demo {
         ProductFilter productFilter = new ProductFilter();
         System.out.println("Green products (old): ");
         productFilter.filterByColor(products, Color.GREEN)
+                .forEach(product -> System.out.println(
+                        " - " + product.getName() + " is green"));
+
+        BetterFilter betterFilter = new BetterFilter();
+        System.out.println("Green products (new): ");
+        betterFilter.filter(products, new ColorSpecification(Color.GREEN))
                 .forEach(product -> System.out.println(
                         " - " + product.getName() + " is green"));
     }
