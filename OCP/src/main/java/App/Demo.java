@@ -1,4 +1,10 @@
+package App;
+
+import Entities.Product;
+import Entities.Size;
 import java.util.List;
+import Entities.Color;
+import Service.ProductFilter;
 
 public class Demo {
     public static void main(String[] args) {

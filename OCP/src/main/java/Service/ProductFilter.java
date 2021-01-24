@@ -1,3 +1,9 @@
+package Service;
+
+import Entities.Color;
+import Entities.Product;
+import Entities.Size;
+
 import java.util.List;
 import java.util.stream.Stream;
 
