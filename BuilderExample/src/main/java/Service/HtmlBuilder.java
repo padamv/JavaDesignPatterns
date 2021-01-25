@@ -1,3 +1,7 @@
+package Service;
+
+import Entities.HtmlElement;
+
 public class HtmlBuilder {
     private String rootName;
     private HtmlElement root = new HtmlElement();

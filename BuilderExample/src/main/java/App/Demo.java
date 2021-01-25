@@ -1,3 +1,7 @@
+package App;
+
+import Service.HtmlBuilder;
+
 public class Demo {
     public static void main(String[] args) {
         HtmlBuilder builder = new HtmlBuilder("ul");
