@@ -20,5 +20,6 @@ public class HtmlBuilder {
     @Override
     public String toString() {
         return root.toString();
+
     }
 }
