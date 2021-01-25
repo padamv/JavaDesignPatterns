@@ -7,9 +7,10 @@ public class HtmlBuilder {
         root.setName(rootName);
     }
 
-    public void addChild(String childName, String childText){
+    public HtmlBuilder addChild(String childName, String childText){
         HtmlElement element = new HtmlElement(childName, childText);
         root.getElements().add(element);
+        return this;
     }
 
     public void clear() {
