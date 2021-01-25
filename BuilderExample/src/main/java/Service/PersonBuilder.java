@@ -11,7 +11,7 @@ public class PersonBuilder <SELF extends PersonBuilder<SELF>>{
         return self();
     }
 
-    private SELF self() {
+    protected SELF self() {
         // unchecked cast, but actually safe
         return (SELF) this;
     }
