@@ -15,6 +15,13 @@ public class Point {
                 this.y = a * Math.sin(b);
             }
         }
+    }
 
+    public static Point newCartesianPoint(double x, double y ){
+        return new Point(x, y, CoordinateSystem.CARTESIAN);
+    }
+
+    public static Point newPolarPoint(double rho, double theta){
+        return new Point(rho, theta, CoordinateSystem.POLAR);
     }
 }
