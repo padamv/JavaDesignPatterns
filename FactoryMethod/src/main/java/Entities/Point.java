@@ -4,7 +4,7 @@ public class Point {
 
     private double x, y;
 
-    public Point(double a, double b, CoordinateSystem coordinateSystem) {
+    private Point(double a, double b, CoordinateSystem coordinateSystem) {
         switch (coordinateSystem) {
             case CARTESIAN -> {
                 this.x = a;
