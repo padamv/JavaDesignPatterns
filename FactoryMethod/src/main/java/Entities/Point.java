@@ -17,11 +17,14 @@ public class Point {
         }
     }
 
-    public static Point newCartesianPoint(double x, double y ){
-        return new Point(x, y, CoordinateSystem.CARTESIAN);
+    public static class Factory {
+        public static Point newCartesianPoint(double x, double y ){
+            return new Point(x, y, CoordinateSystem.CARTESIAN);
+        }
+
+        public static Point newPolarPoint(double rho, double theta){
+            return new Point(rho, theta, CoordinateSystem.POLAR);
+        }
     }
 
-    public static Point newPolarPoint(double rho, double theta){
-        return new Point(rho, theta, CoordinateSystem.POLAR);
-    }
 }
